@@ -3,105 +3,171 @@ import React, { Fragment } from 'react'
 import '../css/headerIntranet.css'
 
 const IntranetHeader = () => {
+    const meuToggle = (elemento) => { }
+
     return (
         <Fragment>
-            <img src="logo-min.png" alt="" className="logo" />
 
-            <input type="checkbox" id="bt_menu" />
-            <label for="bt_menu">&#9776;</label>
-            <div className="espaco" style={{ height: '50px' }}></div>
-            <nav className="menu" id="menu-lateral">
-                <ul>
-                    <li><a href="#">Empreendimentos</a>
-                        <ul>
-                            <li><a href="#">America Officenter</a></li>
-                            <li><a href="#">City Office Square</a></li>
-                            <li><a href="#">Green Village Residence</a></li>
-                            <li><a href="#">Horizonte Novo Estreito</a></li>
-                            <li><a href="#">Max & Flora Center</a></li>
-                            <li><a href="#">Paço Imperial</a></li>
-                            <li><a href="#">Porto Atlântico</a></li>
-                            <li><a href="#">Porto Mare Residence</a></li>
-                            <li><a href="#">Punta Blu Mall Boutique</a></li>
-                            <li><a href="#">Punta Blu Residence</a></li>
-                            <li><a href="#">Solar de Gaia</a></li>
-                            <li><a href="#">Solar dos Plátanos</a></li>
-                            <li><a href="#">Sun Village Residence</a></li>
-                            <li><a href="#">The Office Avenida</a></li>
-                            <li><a href="#">The Office Business Center</a></li>
-                            <li><a href="#">Urban Classic</a></li>
-                            <li><a href="#">Vivaz Condomínio Jardim</a></li>
-                        </ul>
-                    </li>
+            <div style={{background: '#CAE1FF'}}>
+                <nav class="navbar navbar-dark navbar-expand-lg  bg-dark text-white" style={{ borderRadius: '5px' }}>
+                    <a className="navbar-brand" href="#">COTA</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
-                    <li><a href="#">Administrativo</a>
-                        <ul>
-                            <li><a href="#" target="_blank">Organograma</a></li>
-                            <li><a href="#" target="_blank">Manual de Funções</a></li>
-                            <li><a href="#" target="_blank">Normas Internas</a></li>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mr-auto">
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empreendimentos</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">America Officenter</a>
+                                    <a class="dropdown-item" href="#">City Office Square</a>
+                                    <a class="dropdown-item" href="#">Green Village Residence</a>
+                                    <a class="dropdown-item" href="#">Horizonte Novo Estreito</a>
+                                    <a class="dropdown-item" href="#">Horizonte Novo Estreito</a>
+                                    <a class="dropdown-item" href="#">Max & Flora Center</a>
+                                    <a class="dropdown-item" href="#">Paço Imperial</a>
+                                    <a class="dropdown-item" href="#">Porto Atlântico</a>
+                                    <a class="dropdown-item" href="#">Porto Mare Residence</a>
+                                    <a class="dropdown-item" href="#">Punta Blu Mall Boutique</a>
+                                    <a class="dropdown-item" href="#">Punta Blu Residence</a>
+                                    <a class="dropdown-item" href="#">Solar de Gaia</a>
+                                    <a class="dropdown-item" href="#">Sun Village Residence</a>
+                                    <a class="dropdown-item" href="#">The Office Avenida</a>
+                                    <a class="dropdown-item" href="#">The Office Business Center</a>
+                                    <a class="dropdown-item" href="#">Urban Classic</a>
+                                    <a class="dropdown-item" href="#">Vivaz Condomínio Jardim</a>
+                                    {/* <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a> */}
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrativo</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" target="_blank">Organograma</a>
+                                    <a class="dropdown-item" href="#" target="_blank">Manual de Funções</a>
+                                    <a class="dropdown-item" href="#" target="_blank">Normas Internas</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="https://www.globo.com" target="_blank">Globo</a>
+                                    <a class="dropdown-item" href="https://oglobo.globo.com" target="_blank">Jornal O Globo</a>
+                                    <a class="dropdown-item" href="https://www.folha.uol.com.br" target="_blank">Folha de São Paulo</a>
+                                    <a class="dropdown-item" href="http://www.estadao.com.br" target="_blank">Jornal Estado de São Paulo</a>
+                                    <a class="dropdown-item" href="https://veja.abril.com.br" target="_blank">Revista Veja</a>
+                                    <a class="dropdown-item" href="https://epoca.globo.com" target="_blank">Revista Época</a>
+                                    <a class="dropdown-item" href="https://istoe.com.br" target="_blank">Revisa Isto É</a>
+                                    <a class="dropdown-item" href="https://www.nsctotal.com.br/dc" target="_blank">NSC Total</a>
+                                    <a class="dropdown-item" href="https://ndmais.com.br" target="_blank">Notícias do Dia</a>
+                                    <a class="dropdown-item" href="http://www.valor.com.br" target="_blank">Valor Econômico</a>
+                                    <a class="dropdown-item" href="https://epocanegocios.globo.com" target="_blank">Época Negócios</a>
+                                    <a class="dropdown-item" href="https://exame.abril.com.br" target="_blank">Revista Exame</a>
+                                    <a class="dropdown-item" href="https://www.terra.com.br" target="_blank">Terra</a>
+                                    <a class="dropdown-item" href="https://www.uol.com.br" target="_blank">UOL</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bancos</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="http://www.bradesco.com.br" target="_blank">Bradesco</a>
+                                    <a class="dropdown-item" href="http://www.bb.com.br" target="_blank">Banco do Brasil</a>
+                                    <a class="dropdown-item" href="file:///C:/BancoBrasil/officeIE/index.html" target="_blank">Brasil - Office</a>
+                                    <a class="dropdown-item" href="http://www.caixa.gov.br" target="_blank">CEF</a>
+                                    <a class="dropdown-item" href="https://www.secureweb.com.br" target="_blank">Real</a>
+                                    <a class="dropdown-item" href="http://www.safraempresas.com.br" target="_blank">Safra</a>
+                                    <a class="dropdown-item" href="http://www.santander.com.br" target="_blank">Santander</a>
+                                    <a class="dropdown-item" href="http://www.credicard.com.br/home/default.htm" target="_blank">Credicard</a>
+                                    <a class="dropdown-item" href="http://www.itau.com.br/empresas" target="_blank">Itau</a>
+                                    <a class="dropdown-item" href="http://www.bancointer.com.br" target="_blank">Inter</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Órgãos Públicos</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="http://www.presidencia.gov.br" target="_blank">Presidência - Planalto</a>
+                                    <a class="dropdown-item" href="http://www.jfsc.gov.br" target="_blank">Tribunal de Justiça Federal - SC</a>
+                                    <a class="dropdown-item" href="http://www.tj.sc.gov.br" target="_blank">Tribunal de Justiça - SC</a>
+                                    <a class="dropdown-item" href="http://www.receita.fazenda.gov.br" target="_blank">Receita Federal</a>
+                                    <a class="dropdown-item" href="http://www.previdenciasocial.gov.br" target="_blank">Previdência Social</a>
+                                    <a class="dropdown-item" href="http://www.sef.sc.gov.br" target="_blank">Fazenda Estadual</a>
+                                    <a class="dropdown-item" href="http://www.jucesc.sc.gov.br" target="_blank">Junta Comercial de SC</a>
+                                    <a class="dropdown-item" href="http://www.pmf.sc.gov.br" target="_blank">Prefeitura Mun. Florianópolis</a>
+                                    <a class="dropdown-item" href="http://sefinnet.pmf.sc.gov.br" target="_blank">Fazenda Municipal</a>
+                                    <a class="dropdown-item" href="http://www.sinduscon-fpolis.org.br" target="_blank">Sinduscon - Fpolis</a>
+                                    <a class="dropdown-item" href="http://www.connectsa.com.br" target="_blank">SPC</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sites Úteis</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="http://www.buscacep.correios.com.br" target="_blank">CEP</a>
+                                    <a class="dropdown-item" href="http://www.cota.com.br" target="_blank">COTA</a>
+                                    <a class="dropdown-item" href="http://www.crea-sc.org.br" target="_blank">CREA</a>
+                                    <a class="dropdown-item" href="http://www.google.com.br" target="_blank">Google</a>
+                                    <a class="dropdown-item" href="http://www.horariodebrasilia.org" target="_blank">Horário Oficial do Brasil</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sugestões</a>
+                            </li>
+
+
                         </ul>
-                    </li>
-                    <li><a href="#">Notícias</a>
-                        <ul>
-                            <li><a href="https://www.globo.com" target="_blank">Globo</a></li>
-                            <li><a href="https://oglobo.globo.com" target="_blank">Jornal O Globo</a></li>
-                            <li><a href="https://www.folha.uol.com.br" target="_blank">Folha de São Paulo</a></li>
-                            <li><a href="http://www.estadao.com.br" target="_blank">Jornal Estado de São Paulo</a></li>
-                            <li><a href="https://veja.abril.com.br" target="_blank">Revista Veja</a></li>
-                            <li><a href="https://epoca.globo.com" target="_blank">Revista Época</a></li>
-                            <li><a href="https://istoe.com.br" target="_blank">Revisa Isto É</a></li>
-                            <li><a href="https://www.nsctotal.com.br/dc" target="_blank">NSC Total</a></li>
-                            <li><a href="https://ndmais.com.br" target="_blank">Notícias do Dia</a></li>
-                            <li><a href="http://www.valor.com.br" target="_blank">Valor Econômico</a></li>
-                            <li><a href="https://epocanegocios.globo.com" target="_blank">Época Negócios</a></li>
-                            <li><a href="https://exame.abril.com.br" target="_blank">Revista Exame</a></li>
-                            <li><a href="https://www.terra.com.br" target="_blank">Terra</a></li>
-                            <li><a href="https://www.uol.com.br" target="_blank">UOL</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" target="_blank">Bancos</a>
-                        <ul>
-                        <li><a href="http://www.bradesco.com.br" target="_blank">Bradesco</a></li>
-                            <li><a href="http://www.bb.com.br" target="_blank">Banco do Brasil</a></li>
-                            <li><a href="file:///C:/BancoBrasil/officeIE/index.html" target="_blank">Brasil - Office</a></li>
-                            <li><a href="http://www.caixa.gov.br" target="_blank">CEF</a></li>
-                            <li><a href="https://www.secureweb.com.br" target="_blank">Real</a></li>
-                            <li><a href="http://www.safraempresas.com.br" target="_blank">Safra</a></li>
-                            <li><a href="http://www.santander.com.br" target="_blank">Santander</a></li>
-                            <li><a href="http://www.credicard.com.br/home/default.htm" target="_blank">Credicard</a></li>
-                            <li><a href="http://www.itau.com.br/empresas" target="_blank">Itau</a></li>
-                            <li><a href="http://www.bancointer.com.br" target="_blank">Inter</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" target="_blank">Órgãos Públicos</a>
-                        <ul>
-                        <li><a href="http://www.presidencia.gov.br" target="_blank">Presidência - Planalto</a></li>
-                            <li><a href="http://www.jfsc.gov.br" target="_blank">Tribunal de Justiça Federal - SC</a></li>
-                            <li><a href="http://www.tj.sc.gov.br" target="_blank">Tribunal de Justiça - SC</a></li>
-                            <li><a href="http://www.receita.fazenda.gov.br" target="_blank">Receita Federal</a></li>
-                            <li><a href="http://www.previdenciasocial.gov.br" target="_blank">Previdência Social</a></li>
-                            <li><a href="http://www.sef.sc.gov.br" target="_blank">Fazenda Estadual</a></li>
-                            <li><a href="http://www.jucesc.sc.gov.br" target="_blank">Junta Comercial de SC</a></li>
-                            <li><a href="http://www.pmf.sc.gov.br" target="_blank">Prefeitura Mun. Florianópolis</a></li>
-                            <li><a href="http://sefinnet.pmf.sc.gov.br" target="_blank">Fazenda Municipal</a></li>
-                            <li><a href="http://www.sinduscon-fpolis.org.br" target="_blank">Sinduscon - Fpolis</a></li>
-                            <li><a href="http://www.connectsa.com.br" target="_blank">SPC</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Sites Úteis</a>
-                        <ul>
-                        <li><a href="http://www.buscacep.correios.com.br" target="_blank">CEP</a></li>
-                            <li><a href="http://www.cota.com.br" target="_blank">COTA</a></li>
-                            <li><a href="http://www.crea-sc.org.br" target="_blank">CREA</a></li>
-                            <li><a href="http://www.google.com.br" target="_blank">Google</a></li>
-                            <li><a href="http://www.horariodebrasilia.org" target="_blank">Horário Oficial do Brasil</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Sugestões</a></li>
-                </ul>
-            </nav>
+
+                        
+                    </div>
+                </nav>
+            </div>
+
+
+
+            
         </Fragment>
     )
 }
 
 export default IntranetHeader
+
+        //https://www.youtube.com/watch?v=TLEwZZlB6Bs recovery senha
+//https://www.youtube.com/watch?v=TLEwZZlB6Bs menu accordion
+
+/**
+ *
+ *             <div class="accordion" id="accordionExample">
+
+                <div>
+                    <button class="btn btn-link"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne">
+                        aaaaaa
+                </button>
+
+                    <div id="collapseOne"
+                        class="collapse show"
+                        data-parent="#accordionExample">
+
+                        <ul>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" >Dropdown</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+ */

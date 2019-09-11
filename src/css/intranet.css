@@ -1,5 +1,5 @@
 .intra-container {
-    width: 80%;
+    width: 90%;
     background: linen;
     margin: 0 auto;
 }
@@ -133,10 +133,17 @@
     flex: 7;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
 
     .intra-container {
         width: 90%;
+    }
+}
+
+@media(max-width: 1024px) {
+
+    .intra-container {
+        width: 98%;
     }
 
     .intra-body-aniv__parabens {

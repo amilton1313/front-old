@@ -5,31 +5,6 @@
     font-family: sans-serif;
 }
 
-.barra-menu {
-    height: 50px;
-    background: #ce852a;
-    color: #fff;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.barra-menu ul {
-    display: flex;
-    list-style: none;
-}
-
-.blue {
-    color: blue;
-}
-
-.barra-menu a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
 header {
     height: 50px;
     background: #ce852a;

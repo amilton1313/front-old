@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        <Header />
+        {/* <Header /> */}
         <div >
           <Switch>
             <Route exact path="/" component={Intranet} />

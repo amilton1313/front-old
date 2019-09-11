@@ -22,7 +22,7 @@ const Intranet = () => {
 
     return (
         <div className="intra-container">
-            {/* xxx {tamanhoTela} */}
+            {/* {tamanhoTela} */}
             <IntranetHeader />
 
             {
@@ -74,3 +74,8 @@ const lin01Style2 = {
 }
 
 export default Intranet
+
+
+//smartphone = 360
+//desktop antigo 1024
+//meu note 1366
