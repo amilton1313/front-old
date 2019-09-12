@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import store from './config/store'
 import './css/meu.css'
 
+import TelefonesLista from './intranet/TelefonesLista'
 import Header from './cadastros/header/Header'
 import Entrada from './cadastros/principal/Entrada'
 import Principal from './cadastros/principal/Principal'
@@ -23,6 +24,7 @@ function App() {
         <div >
           <Switch>
             <Route exact path="/" component={Intranet} />
+            <Route exact path="/telefone" component={TelefonesLista} />
             <Route exact path="/erp" component={Entrada} />
             <Route exact path="/principal" component={Entrada} />
             <Route exact path="/pessoasLista" component={PessoasLista} />

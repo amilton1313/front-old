@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import IntranetHeader from './IntranetHeader'
-import CubAtual from './CubAtual'
-import Ramais from './Ramais'
 import MensagensLista from './MensagensLista'
 import EmpreendsLista from './EmpreendsLista'
 import '../css/intranet.css'
 
-const Intranet = () => {
+const Intranet = ({ history }) => {
 
     const [tamanhoTela, xTamanhoTela] = useState(window.innerWidth)
 
     const aa = window.innerWidth
-    
-
-    
 
     window.addEventListener('resize', function(){
         xTamanhoTela(window.innerWidth)

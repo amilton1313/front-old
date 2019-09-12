@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 
 import '../css/headerIntranet.css'
+import logo from '../img/logo-intra.jpg'
+import botaoMenu from '../img/botao-menu.png'
 
 const IntranetHeader = () => {
     const meuToggle = (elemento) => { }
@@ -9,17 +11,20 @@ const IntranetHeader = () => {
         <Fragment>
 
             <div style={{background: '#CAE1FF'}}>
-                <nav class="navbar navbar-dark navbar-expand-lg  bg-dark text-white" style={{ borderRadius: '5px' }}>
-                    <a className="navbar-brand" href="#">COTA</a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span className="navbar-toggler-icon"></span>
+                <nav class="navbar navbar-custom navbar-expand-lg  text-light" 
+                    style={{ borderRadius: '5px' }}>
+                    <a className="navbar-brand text-light" href="#">
+                        <img src={logo} alt="" className="logo-intra"/>
+                        </a>
+                    <button className="navbar-toggler" style={{outline: 'none'}} type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span ><span className="navbar-toggler-icon container-botao-menu" style={{display: 'flex', justifyContent: 'center'}}><img className="botao-menu" src={botaoMenu} /></span></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empreendimentos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empreendimentos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">America Officenter</a>
                                     <a class="dropdown-item" href="#">City Office Square</a>
@@ -44,7 +49,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrativo</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrativo</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#" target="_blank">Organograma</a>
                                     <a class="dropdown-item" href="#" target="_blank">Manual de Funções</a>
@@ -53,7 +58,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="https://www.globo.com" target="_blank">Globo</a>
                                     <a class="dropdown-item" href="https://oglobo.globo.com" target="_blank">Jornal O Globo</a>
@@ -73,7 +78,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bancos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bancos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="http://www.bradesco.com.br" target="_blank">Bradesco</a>
                                     <a class="dropdown-item" href="http://www.bb.com.br" target="_blank">Banco do Brasil</a>
@@ -89,7 +94,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Órgãos Públicos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Órgãos Públicos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="http://www.presidencia.gov.br" target="_blank">Presidência - Planalto</a>
                                     <a class="dropdown-item" href="http://www.jfsc.gov.br" target="_blank">Tribunal de Justiça Federal - SC</a>
@@ -106,8 +111,9 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sites Úteis</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sites Úteis</a>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="http://www.financiamento.com.br/simulador/" target="_blank">Simulador de Financiamento</a>
                                     <a class="dropdown-item" href="http://www.buscacep.correios.com.br" target="_blank">CEP</a>
                                     <a class="dropdown-item" href="http://www.cota.com.br" target="_blank">COTA</a>
                                     <a class="dropdown-item" href="http://www.crea-sc.org.br" target="_blank">CREA</a>
@@ -117,7 +123,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sugestões</a>
+                                <a class="nav-link text-light" href="#">Sugestões</a>
                             </li>
 
 

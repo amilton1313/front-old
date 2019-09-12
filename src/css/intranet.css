@@ -18,6 +18,38 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.logo-intra {
+    height: 45px;
+    /* width: 100%; */
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.navbar-custom { 
+    background-color: rgb(87, 99, 110) !important; 
+    color: white !important;
+}
+
+.container-botao-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-menu {
+    width: 40px;
+    height: 18px;
+    text-align: center;
+
+}
+
+/* .navbar-toggle {
+    color: white !important;
+    background-color: red !important;
+    margin: 0 !important;
+    padding: 0 !important;
+} */
+
 .intra-card__ramais {
     padding: 0;
 }
