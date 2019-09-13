@@ -18,11 +18,28 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.intra-card-contato {
+    background: white;
+    border-radius: 5px;
+    width: 96%; 
+    /* height: 100%; */
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 1em;
+    /* font-weight: 400;
+    line-height: 1.5; */
+    color: '#212529';
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
 .logo-intra {
     height: 45px;
     /* width: 100%; */
     border-radius: 5px;
+    border: 1px solid red;
     margin-top: 0;
+    /* box-shadow: 5px 5px 5px rgb(150, 149, 149); */
+    box-shadow: 5px 5px 5px 0.1px rgba(48, 44, 44, 0.5), 0 6px 20px 0 rgba(48, 44, 44, 0.3)
 }
 
 .navbar-custom { 
@@ -62,13 +79,13 @@
 .intra-card__barra {
     background: steelblue;
     border-radius: 5px;
-    padding: 5px;
+    padding: 1px;
 }
 
 .intra-card__titulo {
     color: white;
     margin-left: 5px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -196,7 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 .cub-linhas {
@@ -206,11 +223,15 @@
     border-top: 1px solid darkgrey;
     padding: 5px 1px 5px 10px;
     border-bottom: 1px solid darkgrey;
-    font-size: 15px;
+    font-size: 1.2rem;
 }
 
 @media(max-width: 800px) {
 
+    nav {
+        border-radius: 0px;
+    }
+    
     .intra-container {
         width: 100%;
     }

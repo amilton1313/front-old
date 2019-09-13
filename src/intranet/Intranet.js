@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import IntranetHeader from './IntranetHeader'
-import MensagensLista from './MensagensLista'
-import EmpreendsLista from './EmpreendsLista'
+import MensagensLista from './mensagens/MensagensLista'
+import EmpreendsLista from './empreendimentos/EmpreendsLista'
 import '../css/intranet.css'
 
 const Intranet = ({ history }) => {

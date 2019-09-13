@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import clienteAxios from '../config/axios'
+import clienteAxios from '../../config/axios'
 
-import { ac_obterIndicesIntranet } from '../actions/ac_indice'
+import { ac_obterIndicesIntranet } from '../../actions/ac_indice'
 
 const Mensagem000 = () => {
 

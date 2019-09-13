@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import store from './config/store'
 import './css/meu.css'
 
-import TelefonesLista from './intranet/TelefonesLista'
+import TelefonesLista from './intranet/telefones/TelefonesLista'
 import Header from './cadastros/header/Header'
 import Entrada from './cadastros/principal/Entrada'
 import Principal from './cadastros/principal/Principal'

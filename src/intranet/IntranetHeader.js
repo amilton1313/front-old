@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import '../css/headerIntranet.css'
 import logo from '../img/logo-intra.jpg'
 import botaoMenu from '../img/botao-menu.png'
+import { Link } from 'react-router-dom'
 
 const IntranetHeader = () => {
     const meuToggle = (elemento) => { }
@@ -24,7 +25,7 @@ const IntranetHeader = () => {
                         <ul className="navbar-nav mr-auto">
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empreendimentos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Empreendimentos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">America Officenter</a>
                                     <a class="dropdown-item" href="#">City Office Square</a>
@@ -49,7 +50,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administrativo</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Administrativo</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#" target="_blank">Organograma</a>
                                     <a class="dropdown-item" href="#" target="_blank">Manual de Funções</a>
@@ -58,7 +59,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Notícias</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="https://www.globo.com" target="_blank">Globo</a>
                                     <a class="dropdown-item" href="https://oglobo.globo.com" target="_blank">Jornal O Globo</a>
@@ -78,7 +79,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bancos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Bancos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="http://www.bradesco.com.br" target="_blank">Bradesco</a>
                                     <a class="dropdown-item" href="http://www.bb.com.br" target="_blank">Banco do Brasil</a>
@@ -94,7 +95,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Órgãos Públicos</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Órgãos Públicos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="http://www.presidencia.gov.br" target="_blank">Presidência - Planalto</a>
                                     <a class="dropdown-item" href="http://www.jfsc.gov.br" target="_blank">Tribunal de Justiça Federal - SC</a>
@@ -111,7 +112,7 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sites Úteis</a>
+                                <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button">Sites Úteis</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="http://www.financiamento.com.br/simulador/" target="_blank">Simulador de Financiamento</a>
                                     <a class="dropdown-item" href="http://www.buscacep.correios.com.br" target="_blank">CEP</a>
@@ -123,7 +124,11 @@ const IntranetHeader = () => {
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Sugestões</a>
+
+
+            <Link to={"/erp"} class="nav-link text-light" >
+                Sistema
+            </Link>
                             </li>
 
 
@@ -132,6 +137,7 @@ const IntranetHeader = () => {
                         
                     </div>
                 </nav>
+                
             </div>
 
 
