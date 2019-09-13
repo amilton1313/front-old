@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom'
 import clienteAxios from '../config/axios'
 
 import TelefonesLista from './TelefonesLista'
+import Empreend_TelefonesNome from './Empreend_TelefonesNome'
 
 const Empreend_Telefones = ({ history }) => {
 
-    const [contatos, xContatos] = useState([])
+    const [telefones, xTelefones] = useState([])
     const [mostrar, xMostrar] = useState(false)
 
     const getContatos = (nome) => {
 
         clienteAxios.get(`/agendatelefonica/${nome}`)
             .then(resposta => {
-                xContatos(resposta.data[0])
+                // xContatos(resposta.data[0])
                 xMostrar(true)
                 
                 const contatos = resposta.data[0]
-                xContatos(contatos.contatos)
+                xTelefones(contatos.contatos)
                 // contatos.contatos.map(contato => (
                 // <p>xxx{contato.nome}</p>
 
@@ -64,14 +65,21 @@ return (
 
         </div>
 
-        {console.log(contatos)}
-
         {
                 mostrar
                 ? <div  style={{marginTop: '10px', height: '250px'}}>
                     {
-                        contatos
-                        ? <p>xxxx</p>
+                        telefones
+                        ? telefones.map(pessoa => (
+                            
+                            <Empreend_TelefonesNome contatos={pessoa.contatos}/>
+
+                        ))
+
+
+ 
+
+
 
                         : null
 
