@@ -2,25 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal'
-
 
 import { ac_obterEmpreendimentos, ac_descargaEmpreendimentosFiltrado } from '../../actions/ac_empreendimento'
-
-import ModalPadrao from '../modal/ModalPadrao'
 
 import Spinner from '../../spinner/Spinner'
 
 const EmpreendimentosLista = ({ history }) => {
-
-    const [mostrarModal, xMostrarModal] = useState(true)
-    const [show, setShow] = useState(false);
-    const [linha, xLinha] = useState('');
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     const dispatch = useDispatch()
 
@@ -61,46 +48,25 @@ const EmpreendimentosLista = ({ history }) => {
             }
             )
     }
-
-    const mostrarSelecionado = (item) => {
-        console.log(item)
-    }
-
-    const iii = [
-        { id_empreendimento: 1, nome: 'AAAAAAAAAAA'},
-        { id_empreendimento: 2, nome: 'BBBBBBBBBBB'},
-        { id_empreendimento: 3, nome: 'CCCCCCCCCCC'},
-    ]
+    
 
     return (
         <React.Fragment>
-
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPadrao">
-            <i class="far fa-folder-open"></i>
-            </button>
-
-            <div class="modal fade" id="modalPadrao" tabindex="-1" role="dialog">
-                <ModalPadrao
-                    itens={iii}
-                    id='id_empreendimento'
-                    descricao='nome'
-                    titulo="Lista de Empreendimentos"
-                    mostrarSelecionado={mostrarSelecionado} />
-            </div>
-
             {error
                 ? <div className="font-weight-bold alert alert-danger text-center">
                     Houve um erro...
                 </div>
                 : null}
 
-            <div style={{ display: 'flex' }}>
-                <div style={{ flex: '1' }}><h2 className="text-center my-2">Lista de empreendimentos</h2></div>
-                <div style={{ display: '3' }}><Link to={"/empreendimento"} className="btn btn-danger nuevo-post d-block d-md-inline-block">
-                    Cadastrar +
+                <div style={{display: 'flex'}}>
+                    <div style={{flex: '1'}}><h2 className="text-center my-2">Lista de empreendimentos</h2></div>
+                    <div style={{display: '3'}}><Link to={"/empreendimento"} className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                Cadastrar +
             </Link></div>
 
-            </div>
+                </div>
+
+            {/* <h2 className="text-center my-5">Lista de empreendimentos</h2> */}
 
             <div>
                 <input type="text" name="busca"
@@ -123,7 +89,6 @@ const EmpreendimentosLista = ({ history }) => {
 
                         <tr
                             onClick={() => {
-                                mostrarSelecionado(empreendimento.nome)
                                 history.push(`/dados/editar/${empreendimento.id_empreendimento}`)
                             }}
                         >
@@ -138,6 +103,34 @@ const EmpreendimentosLista = ({ history }) => {
 
 
             {loading ? <Spinner /> : null}
+
+            {/* <!-- Button trigger modal --> */}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+{/* <!-- Modal --> */}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
         </React.Fragment>
     )
 }

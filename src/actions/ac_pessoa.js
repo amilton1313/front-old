@@ -4,11 +4,48 @@ import {
     PESSOA_DADOS_DESCARGA_EXITO,
     PESSOA_DADOS_DESCARGA_ERRO,
     PESSOA_DADOS_FILTRADO,
-    PESSOA_DADOS_INCLUIR
+    PESSOA_DADOS_INCLUIR,
+
+    PESSOA_DADOS_CNPJ_EXITO,
+    PESSOA_DADOS_CNPJ_ERRO
 
 } from '../types/ty_pessoas_dados'
 
 import clienteAxios from '../config/axios'
+
+// ac_obterPessoaDadosCnpj
+
+export const ac_obterPessoaDadosCnpj = (token, cnpj, direcionaPessoaDados) => {
+    return (dispatch) => {
+
+        clienteAxios.get(`/pessoa/cnpj/${cnpj}`, {
+            headers: { Authorization: token }
+        })
+            .then(resposta => {
+
+                console.log('eis',resposta.data)
+                dispatch(obterPessoaDadosCnpj_exito(resposta.data[0]))
+                if (resposta.data.length < 1) {
+                    direcionaPessoaDados("I")
+                } else {direcionaPessoaDados("A")}
+            })
+            .catch(err => {
+                console.log(err)
+                dispatch(obterPessoaDadosCpf_erro())
+            })
+    }
+}
+
+export const obterPessoaDadosCnpj_exito = pessoa => ({
+    type: PESSOA_DADOS_CNPJ_EXITO,
+    payload: pessoa
+})
+
+export const obterPessoaDadosCpf_erro = () => ({
+    type: PESSOA_DADOS_CNPJ_ERRO
+})
+
+//
 
 export const ac_obterPessoasDados = token => {
 

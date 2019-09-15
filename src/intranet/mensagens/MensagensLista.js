@@ -56,21 +56,23 @@ const MensagensLista = () => {
                 data="13/08/2019"
                 cor="red"
                 texto={
-                    <p class="card-text" style={{fontSize: '1.1em'}}>
+                    <p class="card-text" style={{fontSize: '1.1em', textAlign : 'justify'}}>
                     <br />
                     Bom dia colaboradores !
                     <br />
                     <br />
-                    Hoje a Cota entra nos seu 45º ano de vida.
-                    <br />
+                    Hoje a Cota entra no seu 45º ano de vida.
+                    
                     Uma história que merece ser comemorada.
-                    <br />
-                    Somos umas das poucas incorporadoras da cidade com tantos anos
-                    <br />
-                    e atuantes no mercado. Vários desafios e conquistas já tivemos.
-                    <br />
+                    
+                    Somos umas das poucas incorporadoras da cidade com tantos 
+                    
+                    anos e atuante no mercado. Vários desafios e conquistas 
+                    
+                    já tivemos.
+                    
                     Parabéns para todos nós e obrigada por fazer parte desta história !
-                    <br />
+                    
                     Hoje às 17 horas vamos nos reunir na copa para o famoso parabéns !
                     <br />
                     <br />

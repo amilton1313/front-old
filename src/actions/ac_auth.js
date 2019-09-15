@@ -7,12 +7,10 @@ import {
 import clienteAxios from '../config/axios'
 
 export const ac_obterAutorizacao = usuario => {
-    console.log('chegou act')
     return (dispatch) => {
         
         clienteAxios.post('/auth',usuario)
         .then(resposta => {
-                console.log('resposta ',resposta.data)
                 if (resposta.data) {
                     dispatch(resultadoAuthExito(resposta.data))
                 } else {

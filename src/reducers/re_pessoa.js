@@ -3,7 +3,10 @@ import {
     PESSOA_DADOS_DESCARGA_EXITO,
     PESSOA_DADOS_DESCARGA_ERRO,
     PESSOA_DADOS_FILTRADO,
-    PESSOA_DADOS_INCLUIR
+    PESSOA_DADOS_INCLUIR,
+
+    PESSOA_DADOS_CNPJ_EXITO,
+    PESSOA_DADOS_CNPJ_ERRO
 
 } from '../types/ty_pessoas_dados'
 
@@ -58,6 +61,18 @@ export default function (state = initialState, action) {
     
                     pessoas: [...state.pessoas, action.payload]
                 }
+
+        case PESSOA_DADOS_CNPJ_EXITO:
+            return {
+                ...state,
+                pessoa: action.payload
+            }      
+            
+        case PESSOA_DADOS_CNPJ_ERRO:
+            return {
+                ...state,
+                pessoa: {}
+            }
         
         default:
             return state
