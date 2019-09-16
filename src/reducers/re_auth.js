@@ -18,7 +18,6 @@ const initialState = {
 export default function (state = initialState, action) {
     switch (action.type) {
         case CHECAR_AUTH_EXITO:
-            console.log('re_autl', action)
             return {
                 ...state,
                 auth: true,

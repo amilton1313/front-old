@@ -11,3 +11,7 @@
         -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
         transform: scale(1.5);
     }
+    .mensagemCPF {
+        color: red;
+        font-weight: bold;
+    }

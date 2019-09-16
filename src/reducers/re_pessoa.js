@@ -5,6 +5,9 @@ import {
     PESSOA_DADOS_FILTRADO,
     PESSOA_DADOS_INCLUIR,
 
+    PESSOA_DADOS_INCLUSAO_EXITO,
+    PESSOA_DADOS_INCLUSAO_ERRO,
+
     PESSOA_DADOS_CNPJ_EXITO,
     PESSOA_DADOS_CNPJ_ERRO
 
@@ -54,13 +57,21 @@ export default function (state = initialState, action) {
                 error: false
             }
 
-        case PESSOA_DADOS_INCLUIR:
+        case PESSOA_DADOS_INCLUSAO_EXITO:
                 return {
                     ...state,
                     error: null,
     
-                    pessoas: [...state.pessoas, action.payload]
+                    pessoas: [...state.pessoas, action.payload],
+                    pessoa: action.payload
                 }
+
+        case PESSOA_DADOS_INCLUSAO_ERRO:
+            return {
+                ...state,
+                pessoa: {},
+                error: true,
+            }        
 
         case PESSOA_DADOS_CNPJ_EXITO:
             return {
@@ -71,7 +82,8 @@ export default function (state = initialState, action) {
         case PESSOA_DADOS_CNPJ_ERRO:
             return {
                 ...state,
-                pessoa: {}
+                pessoa: {},
+                error: true,
             }
         
         default:

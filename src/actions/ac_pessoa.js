@@ -6,6 +6,9 @@ import {
     PESSOA_DADOS_FILTRADO,
     PESSOA_DADOS_INCLUIR,
 
+    PESSOA_DADOS_INCLUSAO_EXITO,
+    PESSOA_DADOS_INCLUSAO_ERRO,
+
     PESSOA_DADOS_CNPJ_EXITO,
     PESSOA_DADOS_CNPJ_ERRO
 
@@ -13,25 +16,79 @@ import {
 
 import clienteAxios from '../config/axios'
 
+// ac_addPessoaDados
+
+export function ac_addPessoasDados(token, pessoa, retornoDoBanco) {
+    return (dispatch) => {
+
+        clienteAxios.post('/pessoa', pessoa, {
+            headers: { Authorization: token }
+        })
+            .then(resposta => {
+                console.log('sim', resposta)
+                dispatch(addPessoasDadosExito(pessoa))
+                retornoDoBanco(resposta)
+            })
+            .catch(err => {
+                console.log('nao', err)
+                dispatch(addPessoasDadosErro())
+                retornoDoBanco(err)
+            })
+    }
+}
+
+export const addPessoasDadosExito = pessoa => ({
+    type: PESSOA_DADOS_INCLUSAO_EXITO,
+    payload: pessoa
+})
+
+export const addPessoasDadosErro = () => ({
+    type: PESSOA_DADOS_INCLUSAO_ERRO
+})
+
+// ac_updPessoaDados
+
+export function ac_updPessoasDados(token, pessoa, retornoDoBanco) {
+
+    const { id_pessoa } = pessoa
+    console.log('id-pessoa update ', id_pessoa)
+
+    return (dispatch) => {
+
+        clienteAxios.put(`/pessoa/${id_pessoa}`, pessoa, {
+            headers: { Authorization: token }
+        })
+            .then(resposta => {
+                console.log('sim', resposta)
+                dispatch(addPessoasDadosExito(pessoa))
+                retornoDoBanco(resposta)
+            })
+            .catch(err => {
+                console.log('nao', err)
+                dispatch(addPessoasDadosErro())
+                retornoDoBanco(err)
+            })
+    }
+}
+
+
 // ac_obterPessoaDadosCnpj
 
-export const ac_obterPessoaDadosCnpj = (token, cnpj, direcionaPessoaDados) => {
+export const ac_obterPessoaDadosCnpj = (token, cnpj, atualizarPessoa) => {
     return (dispatch) => {
 
         clienteAxios.get(`/pessoa/cnpj/${cnpj}`, {
             headers: { Authorization: token }
         })
             .then(resposta => {
-
-                console.log('eis',resposta.data)
                 dispatch(obterPessoaDadosCnpj_exito(resposta.data[0]))
                 if (resposta.data.length < 1) {
-                    direcionaPessoaDados("I")
-                } else {direcionaPessoaDados("A")}
+                    // atualizarPessoa("I", resposta.data[0])
+                } else {atualizarPessoa(resposta.data[0])}
             })
             .catch(err => {
                 console.log(err)
-                dispatch(obterPessoaDadosCpf_erro())
+                dispatch(obterPessoaDadosCnpj_erro())
             })
     }
 }
@@ -41,7 +98,7 @@ export const obterPessoaDadosCnpj_exito = pessoa => ({
     payload: pessoa
 })
 
-export const obterPessoaDadosCpf_erro = () => ({
+export const obterPessoaDadosCnpj_erro = () => ({
     type: PESSOA_DADOS_CNPJ_ERRO
 })
 
@@ -83,25 +140,7 @@ export const ac_descargaPessoasFiltrado = pessoas => ({
     payload: pessoas
 })
 
-    export function ac_incluirPessoasDados(pessoa) {
-        console.log('ac_incluirPessoasDados')
-        return (dispatch) => {
-
-            console.log('dentro ac_incluirPessoasDados')
-            // dispatch(novoProduto())
     
-            clienteAxios.post('/pessoa', pessoa)
-                .then(resposta => {
-                    console.log('sim', resposta)
-                    // dispatch(agregarProductoExito(producto))
-                })
-                .catch(err => {
-                    console.log('nao', err)
-                    // dispatch(agregarProductoError())
-                })
-    
-        }
-    }
 
     // export const ac_incluirPessoasDados = pessoa => dispatch => {
     //     clienteAxios.post('/pessoa', pessoa)

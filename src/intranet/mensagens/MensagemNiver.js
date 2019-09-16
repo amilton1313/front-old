@@ -9,7 +9,7 @@ const Mensagem001 = ({titulo, cor, data, img, nome, local, dataExt}) => {
                 <div className="intra-card__date">{data}</div>
             </div>
             <div className="intra-body-aniv">
-                <img src={img} className="intra-img-small intra-body-aniv__img" />
+                <img src={img} className="intra-img-small intra-body-aniv__img" alt="foto" />
                 <div>
                     <p className="intra-body-aniv__text">
                         <span className="text-primary intra-body-aniv__nome" >{nome}</span>

@@ -341,13 +341,19 @@ const PessoaDados = ({ history }) => {
 
                             <div className="form-group">
                                 <label className="labelForm">UF:</label>
-                                <input
+                                <select>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                {/* <input
                                     type="text"
                                     maxLength="2"
                                     className="form-control maiusculas"
                                     value={uf}
                                     onChange={e => xUf(e.target.value)}
-                                />
+                                /> */}
                             </div>
 
                             {/* *** Num CRECI *** */}

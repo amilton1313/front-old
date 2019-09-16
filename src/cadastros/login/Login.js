@@ -62,7 +62,7 @@ const Login = ({ history }) => {
                     <div className="form-group">
                         <label className="labelForm">Senha:</label>
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
                             value={senha}
                             onChange={e => xSenha(e.target.value)}

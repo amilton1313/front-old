@@ -10,7 +10,7 @@ const MensagemImg = ({titulo,cor,data,img}) => {
             </div>
 
             <div>
-                <img src={img} className="intra-img-all" />
+                <img src={img} className="intra-img-all" alt="foto"/>
             </div>
 
         </div>

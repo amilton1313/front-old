@@ -1,4 +1,5 @@
 export const cpfMask = value => {
+      if (value.length === 0) return value
     return value
       .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
       .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
@@ -8,6 +9,7 @@ export const cpfMask = value => {
   }
 
   export const cnpjMask = value => {
+      if (value.length === 0) return value
     return value
       .replace(/\D/g, '')
       .replace(/(\d{2})(\d)/, '$1.$2')
@@ -18,6 +20,7 @@ export const cpfMask = value => {
   }
 
   export const cepMask = value => {
+      if (value.length === 0) return value
     return value
       .replace(/\D/g, '')
       .replace(/(\d{5})(\d)/, '$1-$2')
@@ -25,6 +28,7 @@ export const cpfMask = value => {
   }
 
   export const cpfFormat = value => {
+      if (value.length === 0) return value
       let a = value.replace(/\D/g, '')
       let b=a.substring(0,3)
       if (a.length > 3) b = b + '.' + a.substring(3,6)
@@ -34,6 +38,7 @@ export const cpfMask = value => {
   }
 
 export const cnpjFormat = value => {
+      if (value.length === 0) return value
     let a = value.replace(/\D/g, '')
     let b=a.substring(0,2)
     if (a.length > 2) b = b + '.' + a.substring(2,5)
@@ -44,6 +49,79 @@ export const cnpjFormat = value => {
 }
 
 export const clearFormat = value => {
+      if (value === undefined) return value
+      if (value.length === 0) return value
   return value.replace(/\D/g, '')
+}
+
+export const validarCPF = (cpf) => {
+      if (cpf.length === 0) return cpf
+  var numeros, digitos, soma, i, resultado, digitos_iguais;
+  digitos_iguais = 1;
+  if (cpf.length < 11)
+        return false;
+  for (i = 0; i < cpf.length - 1; i++)
+        if (cpf.charAt(i) != cpf.charAt(i + 1))
+              {
+              digitos_iguais = 0;
+              break;
+              }
+  if (!digitos_iguais)
+        {
+        numeros = cpf.substring(0,9);
+        digitos = cpf.substring(9);
+        soma = 0;
+        for (i = 10; i > 1; i--)
+              soma += numeros.charAt(10 - i) * i;
+        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+        if (resultado != digitos.charAt(0))
+              return false;
+        numeros = cpf.substring(0,10);
+        soma = 0;
+        for (i = 11; i > 1; i--)
+              soma += numeros.charAt(11 - i) * i;
+        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+        if (resultado != digitos.charAt(1))
+              return false;
+        return true;
+        }
+  else
+      return false;
+}
+
+export const validarCNPJ = (s) => {
+      if (s.length === 0) return s
+	let cnpj = s.replace(/[^\d]+/g, '')
+
+	// Valida a quantidade de caracteres
+	if (cnpj.length !== 14)
+		return false
+
+	// Elimina inválidos com todos os caracteres iguais
+	if (/^(\d)\1+$/.test(cnpj))
+		return false
+
+	// Cáculo de validação
+	let t = cnpj.length - 2,
+		d = cnpj.substring(t),
+		d1 = parseInt(d.charAt(0)),
+		d2 = parseInt(d.charAt(1)),
+		calc = x => {
+			let n = cnpj.substring(0, x),
+				y = x - 7,
+				s = 0,
+				r = 0
+
+				for (let i = x; i >= 1; i--) {
+					s += n.charAt(x - i) * y--;
+					if (y < 2)
+						y = 9
+				}
+
+				r = 11 - s % 11
+				return r > 9 ? 0 : r
+		}
+
+	return calc(t) === d1 && calc(t + 1) === d2
 }
 

@@ -10,10 +10,10 @@ const EmpreendimentoModelo = ({ logo, fachada }) => {
                 <a onclick="pg_const()" href="#">
                     <div>
                         <div>
-                            <img src={logo} class=" img-fluid" />
+                            <img src={logo} class=" img-fluid" alt="foto" />
                         </div>
                         <div>
-                            <img src={fachada} class=" img-fluid" />
+                            <img src={fachada} class=" img-fluid" alt="foto" />
                         </div>
                     </div>
                 </a>

@@ -9,8 +9,6 @@ const Intranet = ({ history }) => {
 
     const [tamanhoTela, xTamanhoTela] = useState(window.innerWidth)
 
-    const aa = window.innerWidth
-
     window.addEventListener('resize', function(){
         xTamanhoTela(window.innerWidth)
     });
