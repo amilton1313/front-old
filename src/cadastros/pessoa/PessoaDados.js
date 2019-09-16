@@ -516,6 +516,18 @@ const PessoaDados = ({ history, location }) => {
                                 />
                             </div>
 
+                            {/* *** Observações *** */}
+
+                            <div className="form-group">
+                                        <label className="labelForm">Observações:</label>
+                                        <textarea
+                                            className="form-control"
+                                            value={observacao}
+                                            rows="5" cols="33"
+                                            onChange={e => xObservacao(e.target.value)}
+                                        />
+                                    </div>
+
                             {
                                 adm_financeiro === 'true' || adm_sistema === 'true' 
                                 ?
@@ -582,12 +594,26 @@ const PessoaDados = ({ history, location }) => {
                                         </div>
                                     </div>
 
+                                    
+                                    {/* *** Cadastro Bloqueado: *** */}
+
+                                    <div className="form-group">
+                                        <label className="labelForm">Cadastro Bloqueado:</label>
+                                        <input
+                                            type="checkbox"
+                                            className="form-control checkItem"
+                                            value={edicao_bloqueada}
+                                            onChange={e => xEdicao_bloqueada(e.target.checked)}
+                                        />
+                                    </div>
+
+
                                 </div>
                                 : null
                             }
 
                             {
-                                adm_financeiro === 'true' || adm_sistema === 'true' 
+                                adm_sistema === 'true' 
                                 ?
                                 <div>
 
@@ -625,30 +651,6 @@ const PessoaDados = ({ history, location }) => {
                                             className="form-control maiusculas"
                                             value={apelido}
                                             onChange={e => xApelido(e.target.value)}
-                                        />
-                                    </div>
-
-                                    {/* *** Cadastro Bloqueado: *** */}
-
-                                    <div className="form-group">
-                                        <label className="labelForm">Cadastro Bloqueado:</label>
-                                        <input
-                                            type="checkbox"
-                                            className="form-control checkItem"
-                                            value={edicao_bloqueada}
-                                            onChange={e => xEdicao_bloqueada(e.target.checked)}
-                                        />
-                                    </div>
-
-                                    {/* *** Observações *** */}
-
-                                    <div className="form-group">
-                                        <label className="labelForm">Observações:</label>
-                                        <textarea
-                                            className="form-control"
-                                            value={observacao}
-                                            rows="5" cols="33"
-                                            onChange={e => xObservacao(e.target.value)}
                                         />
                                     </div>
 

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import Login from "../login/Login"
 import LoginCpf from "../login/LoginCpf"
 import Principal from "../principal/Principal"
+import EmBreve from "../principal/EmBreve"
 
 
 const Entrada = () => {
@@ -13,7 +14,8 @@ const Entrada = () => {
     return (<div>
         {auth ? (
             <div>
-                <Principal />
+                {/* <Principal /> */}
+                <EmBreve />
             </div>
         ) : (
             <div>
