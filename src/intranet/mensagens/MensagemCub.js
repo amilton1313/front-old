@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import clienteAxios from '../../config/axios'
 
-const Mensagem000 = () => {
+const MensagemCub = () => {
 
     const [resValor, xResValor] = useState('')
     const [resIndice, xResIndice] = useState('')
@@ -11,7 +11,7 @@ const Mensagem000 = () => {
     useEffect(() => {
 
         getIndices()
-        
+
     }, [])
 
     const getIndices = () => {
@@ -24,16 +24,16 @@ const Mensagem000 = () => {
                 console.log('final ', aa)
 
                 const bb = aa.resvalor[0]
-                xResValor(bb.indice_data_valor)
+                xResValor(bb.indice_data_valor.toLocaleString('pt-BR'))
 
                 const cc = aa.resindice[0]
-                xResIndice(cc.indice_data_valor)
+                xResIndice(cc.indice_data_valor.toLocaleString('pt-BR'))
 
                 const dd = aa.comvalor[0]
-                xComValor(dd.indice_data_valor)
+                xComValor(dd.indice_data_valor.toLocaleString('pt-BR'))
 
                 const ee = aa.comindice[0]
-                xComIndice(ee.indice_data_valor)
+                xComIndice(ee.indice_data_valor.toLocaleString('pt-BR'))
             })
             .catch(err => {
                 console.log(err)
@@ -51,7 +51,6 @@ const Mensagem000 = () => {
 
     return (
         <div className="intra-card intra-flex-center intra-flex-center__top0">
-
             <div className="cub-titulo">CUB do mês de {mesAtual} </div>
             <div className="cub-linhas">
 
@@ -63,4 +62,4 @@ const Mensagem000 = () => {
     )
 }
 
-export default Mensagem000
+export default MensagemCub

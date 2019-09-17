@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Mensagem000 from './MensagemCub'
+import MensagemCub from './MensagemCub'
 import MensagemText from './MensagemText'
 import MensagemNiver from './MensagemNiver'
 import MensagemImg from './MensagemImg'
@@ -16,7 +16,7 @@ const MensagensLista = () => {
 
     return ( 
         <div>
-            <Mensagem000 />
+            <MensagemCub />
             {
                 tamanhoTela < 700
                     ? <div style={{marginLeft: '8px', width: '100%'}}>

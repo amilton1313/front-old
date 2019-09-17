@@ -34,6 +34,7 @@
 
 .logo-intra {
     height: 45px;
+    background: rgb(246, 243, 243);
     /* width: 100%; */
     border-radius: 5px;
     border: 1px solid red;
@@ -43,9 +44,22 @@
 }
 
 .navbar-custom { 
-    background-color: rgb(87, 99, 110) !important; 
+    background-color: linear-gradient(to left, darkgrey, lightgrey);
+    background-image: url('../img/predios.png') !important; 
+    /* background-image: linear-gradient(to left, darkgrey, lightgrey); */
+    background-repeat: repeat-x;
+    background-position: bottom;
     color: white !important;
 }
+
+.navbar-rodape { 
+    background-image: url('../img/predios.png') !important; 
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 25px;
+    width: 100%;
+}
+
 
 .container-botao-menu {
     display: flex;
@@ -54,8 +68,10 @@
 }
 
 .botao-menu {
-    width: 40px;
-    height: 18px;
+    /* width: 40px;
+    height: 18px; */
+    width: 50%;
+    height: 30px;
     text-align: center;
 
 }
