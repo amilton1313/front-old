@@ -16,7 +16,8 @@ const Empreend_Ramais = () => {
                     marginBottom: '4px',
                     fontWeigt: 'bold',
                     marginTop: '0',
-                    justifyContent: 'flex-start'
+                    justifyContent: 'flex-start',
+                    color: 'white'
                 }}
                 onClick={() => xMostrar(!mostrar)}
             
