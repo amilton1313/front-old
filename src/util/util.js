@@ -138,3 +138,6 @@ export const formatarNumero = (n) => {
       return r.split('').reverse().join('');
   }
 
+  export const formatarData = data => {
+      return data
+  }

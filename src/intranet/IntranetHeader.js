@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import '../css/headerIntranet.css'
 import logo from '../img/logo-intra.png'
-import botaoMenu from '../img/threepointswhite.png'
+import botaoMenu from '../img/botao-menu.png'
 import predios from '../img/predios.png'
 import { Link } from 'react-router-dom'
 
@@ -12,15 +12,15 @@ const IntranetHeader = () => {
     return (
         <Fragment>
 
-            <div style={{background: '#CAE1FF'}}>
-            {/* <div style={{backgroundImage: 'url({predios})'}}> */}
-                <nav class="navbar navbar-custom navbar-expand-lg  text-dark" 
+            <div style={{ background: 'LightGray' }}>
+                {/* <div style={{backgroundImage: 'url({predios})'}}> */}
+                <nav class="navbar navbar-custom navbar-expand-lg  text-dark"
                     style={{ borderRadius: '5px' }}>
                     <a className="navbar-brand text-dark" href="#">
-                        <img src={logo} alt="" className="logo-intra"/>
-                        </a>
-                    <button className="navbar-toggler" style={{outline: 'none'}} type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span ><span className="navbar-toggler-icon container-botao-menu" style={{display: 'flex', justifyContent: 'center'}}><img className="botao-menu" src={botaoMenu} /></span></span>
+                        <img src={logo} alt="" className="logo-intra" />
+                    </a>
+                    <button className="navbar-toggler" style={{ outline: 'none' }} type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span ><span className="navbar-toggler-icon container-botao-menu" style={{ display: 'flex', justifyContent: 'center' }}><img className="botao-menu" src={botaoMenu} /></span></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -128,24 +128,24 @@ const IntranetHeader = () => {
                             <li class="nav-item">
 
 
-            <Link to={"/erp"} class="nav-link text-dark" >
-                Sistema
+                                <Link to={"/erp"} class="nav-link text-dark" >
+                                    Sistema
             </Link>
                             </li>
 
 
                         </ul>
 
-                        
+
                     </div>
                 </nav>
-                
-                 {/* <div className="navbar-rodape">
+
+                {/* <div className="navbar-rodape">
                      </div>            */}
             </div>
 
 
-            
+
         </Fragment>
     )
 }

@@ -11,6 +11,7 @@ import PessoaDados_A from '../cadastros/pessoa/PessoaDados_A'
 import PessoasLista from '../cadastros/pessoa/PessoasLista'
 import Empreendimentos from '../cadastros/empreendimentos/Empreendimentos'
 import EmpreendimentosLista from '../cadastros/empreendimentos/EmpreendimentosLista'
+import PoEmpreendimentoDoctos from '../cadastros/portal/PoEmpreendimentoDoctos'
 import Intranet from '../intranet/Intranet'
 import Erp from '../erp/Erp'
 
@@ -29,6 +30,7 @@ const Rotas = () => {
         <Route exact path="/dados/editar/:id" component={PessoaDados} />
         <Route exact path="/empreendimentosLista" component={EmpreendimentosLista} />
         <Route exact path="/empreendimentos" component={Empreendimentos} />
+        <Route exact path="/poempreendimentodoctos" component={PoEmpreendimentoDoctos} />
 
       </Switch>
     </div>
