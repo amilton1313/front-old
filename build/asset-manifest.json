@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ebe52a8d.chunk.css",
-    "main.js": "/static/js/main.bb53976e.chunk.js",
-    "main.js.map": "/static/js/main.bb53976e.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.dc6885b1.js",
-    "runtime~main.js.map": "/static/js/runtime~main.dc6885b1.js.map",
-    "static/js/2.4976a246.chunk.js": "/static/js/2.4976a246.chunk.js",
-    "static/js/2.4976a246.chunk.js.map": "/static/js/2.4976a246.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.817d1564480a2f6e4a194290bbe2cfda.js": "/precache-manifest.817d1564480a2f6e4a194290bbe2cfda.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.ebe52a8d.chunk.css.map": "/static/css/main.ebe52a8d.chunk.css.map"
+    "main.css": "http://localhost:3002/static/css/main.f8dedaa5.chunk.css",
+    "main.js": "http://localhost:3002/static/js/main.a2d57a1b.chunk.js",
+    "main.js.map": "http://localhost:3002/static/js/main.a2d57a1b.chunk.js.map",
+    "runtime~main.js": "http://localhost:3002/static/js/runtime~main.87dbc0a2.js",
+    "runtime~main.js.map": "http://localhost:3002/static/js/runtime~main.87dbc0a2.js.map",
+    "static/js/2.00418952.chunk.js": "http://localhost:3002/static/js/2.00418952.chunk.js",
+    "static/js/2.00418952.chunk.js.map": "http://localhost:3002/static/js/2.00418952.chunk.js.map",
+    "index.html": "http://localhost:3002/index.html",
+    "precache-manifest.cd8a97bd00e37a3099297e23d3172fb7.js": "http://localhost:3002/precache-manifest.cd8a97bd00e37a3099297e23d3172fb7.js",
+    "service-worker.js": "http://localhost:3002/service-worker.js",
+    "static/css/main.f8dedaa5.chunk.css.map": "http://localhost:3002/static/css/main.f8dedaa5.chunk.css.map",
+    "static/media/botao-menu.png": "http://localhost:3002/static/media/botao-menu.9c2dbc1e.png",
+    "static/media/logo-grande.jpg": "http://localhost:3002/static/media/logo-grande.318a9a45.jpg",
+    "static/media/logo-intra.png": "http://localhost:3002/static/media/logo-intra.c45dd36c.png",
+    "static/media/intranet.css": "http://localhost:3002/static/media/predios.7a6a75e1.png"
   }
 }

@@ -5,11 +5,11 @@ const PrincipalMenu = () => {
     return (
         <div>
             <ul>
-                <Link to={"/empreendimentosLista"} >
+                <Link to={"/portal/poempreendimentoslista"} >
                     Empreendimentos
                 </Link>
 
-                <Link to={"/pessoasLista"} >
+                <Link to={"/pessoa/pessoasLista"} >
                     Pessoas
                 </Link>
             </ul>

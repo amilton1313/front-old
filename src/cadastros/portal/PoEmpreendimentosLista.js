@@ -73,18 +73,6 @@ const EmpreendimentosLista = ({ history }) => {
     return (
         <React.Fragment>
 
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPadrao">
-            <i class="far fa-folder-open"></i>
-            </button>
-
-            <div class="modal fade" id="modalPadrao" tabindex="-1" role="dialog">
-                <ModalPadrao
-                    itens={iii}
-                    id='id_empreendimento'
-                    descricao='nome'
-                    titulo="Lista de Empreendimentos"
-                    mostrarSelecionado={mostrarSelecionado} />
-            </div>
 
             {error
                 ? <div className="font-weight-bold alert alert-danger text-center">
@@ -92,13 +80,7 @@ const EmpreendimentosLista = ({ history }) => {
                 </div>
                 : null}
 
-            <div style={{ display: 'flex' }}>
-                <div style={{ flex: '1' }}><h2 className="text-center my-2">Lista de empreendimentos</h2></div>
-                <div style={{ display: '3' }}><Link to={"/empreendimento"} className="btn btn-danger nuevo-post d-block d-md-inline-block">
-                    Cadastrar +
-            </Link></div>
-
-            </div>
+            <div style={{ flex: '1' }}><h2 className="text-center my-2">Lista de empreendimentos</h2></div>
 
             <div>
                 <input type="text" name="busca"
@@ -119,13 +101,7 @@ const EmpreendimentosLista = ({ history }) => {
                 <tbody>
                     {empreendimentos.map(empreendimento => (
 
-                        <tr
-                            // onClick={() => {
-                            //     mostrarSelecionado(empreendimento.nome)
-                            //     history.push(`/dados/editar/${empreendimento.id_empreendimento}`)
-                            // }}
-                        >
-
+                        <tr>
                             <td>{empreendimento.id_empreendimento}</td>
                             <td>{empreendimento.nome}</td>
                             <td><Link to={{
@@ -137,7 +113,15 @@ const EmpreendimentosLista = ({ history }) => {
                                 }} 
                                 className="btn btn-primary"
                                 >Doctos</Link></td>
-                            <td><Link to={"/"} className="btn btn-primary" >Unids</Link></td>
+                            <td><Link to={{
+                                pathname: "/portal/poempreendimentounidades",
+                                state : {
+                                    id_empreendimento: empreendimento.id_empreendimento,
+                                    nomeEmpreendimento: empreendimento.nome 
+                                }
+                                }} 
+                                className="btn btn-primary"
+                                >Unids</Link></td>
                         </tr>
 
                     ))}

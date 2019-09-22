@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react'
 
 import clienteAxios from '../../config/axios'
 
-import MensagemCubPeriodoMostrar from './MensagemCubPeriodoMostrar'
-import { formatarData } from '../../util/util'
 import Spinner from '../../spinner/Spinner'
 
 
 const MensagemCubPeriodo = () => {
 
     const [meses, xMeses] = useState([])
-    const [aa, xaa] = useState('')
     const [loading, xLoading] = useState(true)
 
     useEffect(() => {

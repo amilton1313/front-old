@@ -59,7 +59,7 @@ const PessoasLista = ({ history }) => {
 
                 <div style={{display: 'flex'}}>
                     <div style={{flex: '1'}}><h2 className="text-center my-2">Lista de Pessoas</h2></div>
-                    <div style={{display: '3'}}><Link to={"/pessoadados"} className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                    <div style={{display: '3'}}><Link to={"/pessoa/pessoadados"} className="btn btn-danger nuevo-post d-block d-md-inline-block">
                 Cadastrar +
             </Link></div>
 
