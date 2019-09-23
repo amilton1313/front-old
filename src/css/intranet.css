@@ -236,6 +236,10 @@
     color: white;
 }
 
+.efeito {
+    transition: all 0.3s;
+}
+
 @media(max-width: 1200px) {
 
     .intra-container {

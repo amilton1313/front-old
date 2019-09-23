@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 
 const PrincipalMenu = () => {
     return (
-        <div>
-            <ul>
+        <div className="pri-menu">
                 <Link to={"/portal/poempreendimentoslista"} >
                     Empreendimentos
                 </Link>
@@ -12,7 +11,6 @@ const PrincipalMenu = () => {
                 <Link to={"/pessoa/pessoasLista"} >
                     Pessoas
                 </Link>
-            </ul>
         </div>
     )
 }

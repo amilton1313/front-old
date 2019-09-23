@@ -20,7 +20,8 @@ const IntranetHeader = () => {
                         <img src={logo} alt="" className="logo-intra" />
                     </a>
                     <button className="navbar-toggler" style={{ outline: 'none' }} type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span ><span className="navbar-toggler-icon container-botao-menu" style={{ display: 'flex', justifyContent: 'center' }}><img className="botao-menu" src={botaoMenu} /></span></span>
+                        {/* <span ><span className="navbar-toggler-icon container-botao-menu" style={{ display: 'flex', justifyContent: 'center' }}><img className="botao-menu" src={botaoMenu} /></span></span> */}
+                        <span ><span className="navbar-toggler-icon container-botao-menu d-flex justify-content-center"><i className="fas fa-bars"  style={{fontSize: '1.5rem'}}></i></span></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

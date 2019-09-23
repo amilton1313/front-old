@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-
-
+import './portal.css'
 
 import { ac_obterEmpreendimentos, ac_descargaEmpreendimentosFiltrado } from '../../actions/ac_empreendimento'
 
@@ -64,15 +63,10 @@ const EmpreendimentosLista = ({ history }) => {
         console.log(item)
     }
 
-    const iii = [
-        { id_empreendimento: 1, nome: 'AAAAAAAAAAA'},
-        { id_empreendimento: 2, nome: 'BBBBBBBBBBB'},
-        { id_empreendimento: 3, nome: 'CCCCCCCCCCC'},
-    ]
-
     return (
         <React.Fragment>
 
+        <div className="tab-container">
 
             {error
                 ? <div className="font-weight-bold alert alert-danger text-center">
@@ -80,10 +74,11 @@ const EmpreendimentosLista = ({ history }) => {
                 </div>
                 : null}
 
-            <div style={{ flex: '1' }}><h2 className="text-center my-2">Lista de empreendimentos</h2></div>
+            <div style={{ flex: '1' }}><h2 className="text-center my-2">Empreendimentos</h2></div>
 
             <div>
-                <input type="text" name="busca"
+                <label className="loc-label">Localizar: </label>
+                <input type="text" name="busca"  className="loc-input"
                     onChange={e => {
                         onBuscar(e.target.value)
                     }
@@ -91,45 +86,47 @@ const EmpreendimentosLista = ({ history }) => {
                 />
             </div>
 
-            <table className="table table-sm table-striped table-hover">
-                <thead className="bg-primary table-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nome</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {empreendimentos.map(empreendimento => (
+            <div className="tab-linha-cab">
+                <div className="cel01">#</div>
+                <div className="cel02">NOME</div>
+            </div>
+            {empreendimentos.map(empreendimento => (
 
-                        <tr>
-                            <td>{empreendimento.id_empreendimento}</td>
-                            <td>{empreendimento.nome}</td>
-                            <td><Link to={{
-                                pathname: "/portal/poempreendimentodoctos",
-                                state : {
-                                    id_empreendimento: empreendimento.id_empreendimento,
-                                    nomeEmpreendimento: empreendimento.nome 
-                                }
-                                }} 
-                                className="btn btn-primary"
-                                >Doctos</Link></td>
-                            <td><Link to={{
-                                pathname: "/portal/poempreendimentounidades",
-                                state : {
-                                    id_empreendimento: empreendimento.id_empreendimento,
-                                    nomeEmpreendimento: empreendimento.nome 
-                                }
-                                }} 
-                                className="btn btn-primary"
-                                >Unids</Link></td>
-                        </tr>
+                <div className="tab-linha">
+                <div className="cel01">{empreendimento.id_empreendimento}</div>
+                <div className="cel02">{empreendimento.nome}</div>
+                <div className="tab-linha-botao">
+                <Link to={{
+                    pathname: "/portal/poempreendimentodoctos",
+                    state : {
+                        id_empreendimento: empreendimento.id_empreendimento,
+                        nomeEmpreendimento: empreendimento.nome 
+                    }
+                    }} 
+                    className=""
+                    >Doctos</Link>
+                </div>
+                <div className="tab-linha-botao">
+                <Link to={{
+                    pathname: "/portal/poempreendimentoblocos",
+                    state : {
+                        id_empreendimento: empreendimento.id_empreendimento,
+                        nomeEmpreendimento: empreendimento.nome 
+                    }
+                    }} 
+                    >Unids</Link>
+                </div>
+            </div>
 
-                    ))}
-                </tbody>
-            </table>
+            ))}
 
+            <div>
+
+            </div>
 
             {loading ? <Spinner /> : null}
+
+            </div>
         </React.Fragment>
     )
 }

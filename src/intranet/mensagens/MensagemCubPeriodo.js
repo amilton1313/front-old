@@ -4,6 +4,8 @@ import clienteAxios from '../../config/axios'
 
 import Spinner from '../../spinner/Spinner'
 
+import '../../css/intranet.css'
+
 
 const MensagemCubPeriodo = () => {
 
@@ -47,7 +49,7 @@ const MensagemCubPeriodo = () => {
 
     return (
 
-        <div>
+        <div id="cubperiodo" className="efeito">
             <table>
                 <thead>
                     <tr class="table-cub-periodo table-cub-periodo__cabecalho">

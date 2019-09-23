@@ -14,8 +14,8 @@ import EmpreendimentosLista from '../cadastros/empreendimentos/EmpreendimentosLi
 import PoEmpreendimentoAll from '../cadastros/portal/PoEmpreendimentoAll'
 import PoEmpreendimentosLista from '../cadastros/portal/PoEmpreendimentosLista'
 import PoEmpreendimentoDoctos from '../cadastros/portal/PoEmpreendimentoDoctos'
-import PoEmpreendimentoUnidades from '../cadastros/portal/PoEmpreendimentoUnidades'
-import PoEmpreendimentoUnidadeDoctos from '../cadastros/portal/PoEmpreendimentoUnidadeDoctos'
+import PoEmpreendimentoBlocos from '../cadastros/portal/PoEmpreendimentoBlocos'
+import PoEmpreendimentoUnidadePlantas from '../cadastros/portal/PoEmpreendimentoUnidadePlantas'
 import Intranet from '../intranet/Intranet'
 import Erp from '../erp/Erp'
 
@@ -39,8 +39,8 @@ const Rotas = () => {
         <Route exact path="/portal/poempreendimentoall" component={PoEmpreendimentoAll} />
         <Route exact path="/portal/poempreendimentoslista" component={PoEmpreendimentosLista} />
         <Route exact path="/portal/poempreendimentodoctos" component={PoEmpreendimentoDoctos} />
-        <Route exact path="/portal/poempreendimentounidades" component={PoEmpreendimentoUnidades} />
-        <Route exact path="/portal/poempreendimentounidadedoctos" component={PoEmpreendimentoUnidadeDoctos} />
+        <Route exact path="/portal/poempreendimentoblocos" component={PoEmpreendimentoBlocos} />
+        <Route exact path="/portal/poempreendimentounidadeplantas" component={PoEmpreendimentoUnidadePlantas} />
       </Switch>
     </div>
   )

@@ -8,12 +8,14 @@ const PoEmpreendimentoUnidade = ({ arquivos }) => {
         return null
     } else {
         return (
-            <div>
+            <div className="">
                 {
                     arquivos.map(docto => {
                         arquivo = `http://www.cota.com.br/portaldocliente/arquivos/${docto.nome_arquivo}`
                         return (
-                            <p><a href={arquivo} target="_blank">{docto.descricao}</a></p>
+                            <div className="linha-und">
+                                <a href={arquivo} target="_blank">{docto.descricao}</a>
+                            </div>
                         )
                     })
                 }

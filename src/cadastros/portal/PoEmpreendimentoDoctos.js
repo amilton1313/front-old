@@ -25,9 +25,10 @@ const PoEmpreendimentoDoctos = props => {
 
     if (!doctos.length > 0) {
         return (
-        <div>
-            <h1>{nomeEmpreendimento}</h1>
-            <p>Não há documentos para este empreendimento</p>
+        <div className="tab-container">
+            <h2 className="doc-titulo">{nomeEmpreendimento}</h2>
+            <h3 className="doc-subtitulo">Documentos referentes ao empreendimento</h3>
+            <p className="doc-subtitulo">Não há documentos para este empreendimento</p>
             
         </div>
         )
@@ -35,15 +36,20 @@ const PoEmpreendimentoDoctos = props => {
         let arquivo
         
         return ( 
-            <div>
-                <h1>{nomeEmpreendimento}</h1>
+            <div className="tab-container">
+                <h2 className="doc-titulo">{nomeEmpreendimento}</h2>
+                <h3 className="doc-subtitulo">Documentos referentes ao empreendimento</h3>
                 {
                     doctos.map(docto => {
                         arquivo = `http://www.cota.com.br/portaldocliente/arquivos/${docto.nomearquivo}`
                         return (
-                        <p><a href={arquivo} target="_blank">{docto.nomedocumento}</a></p>
+                            <div className="tab-linha linha-doc">
+                        <a href={arquivo} target="_blank">{docto.nomedocumento}</a>
+                        </div>
                     )})
                 }
+
+            {/* <div className="linha-doc-ultima"></div> */}
     
             </div>
          ) 
